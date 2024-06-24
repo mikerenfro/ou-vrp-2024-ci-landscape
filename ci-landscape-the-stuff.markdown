@@ -54,7 +54,6 @@ x
 
 [Same nerd, not remotely skinny, 2023]: figures/mike-2023.jpg { width=100% }
 :::
-
 :::
 
 ::: notes
@@ -134,12 +133,6 @@ x
 
 # Tools and Software
 
-### Slide
-
-::: notes
-Open XDMoD, Open OnDemand, Spack, ColdFront, OpenHPC
-:::
-
 ## OpenHPC
 
 ### OpenHPC
@@ -160,6 +153,38 @@ Open XDMoD, Open OnDemand, Spack, ColdFront, OpenHPC
 [![](figures/qr-openhpc.png)](https://openhpc.community/)
 :::
 :::
+
+::: notes
+x
+:::
+
+## Open XDMoD
+
+### Open XDMoD
+
+::: notes
+x
+:::
+
+## Open OnDemand
+
+### Open OnDemand
+
+::: notes
+x
+:::
+
+## ColdFront
+
+### ColdFront
+
+::: notes
+x
+:::
+
+## Spack
+
+### Spack
 
 ::: notes
 x

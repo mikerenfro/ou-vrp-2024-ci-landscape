@@ -4,8 +4,7 @@ author:
 institute:
   - \inst{1}Tennessee Tech University
   - \inst{2}Campus Champions Leadership Team
-title: The Cyberinfrastructure Landscape, Part 2
-subtitle: Systems, Service Providers, Technologies
+title: "The Cyberinfrastructure Landscape: Systems, Providers, Technologies"
 date: 2024-06-25
 aspectratio: 169
 theme: Cookeville
@@ -21,11 +20,10 @@ toc: false
 ### Who am I? (Who are any of us, really?)
 
 ::: {.columns align=center}
-
 ::: {.column width=50%}
 #### Back in the day
-- Mechanical engineering student at a public STEM-ish university who should have studied more instead of helping people do things in computer labs.
-- Co-op student at Oak Ridge National Lab before SGI got its cameo in "Jurassic Park" ("It's a Unix system: I know this!").
+- ME student at a medium-sized public STEM-ish university who should have studied more instead of helping people do things in computer labs.
+- Sysadmin/CAD/FEA co-op student at Oak Ridge National Lab before SGI Irix got its cameo in "Jurassic Park" ("It's a Unix system: I know this!").
 :::
 
 ::: {.column width=50%}
@@ -33,17 +31,10 @@ toc: false
 
 [Some skinny nerd, 1990]: figures/mike-1990.jpg { width=100% }
 :::
-
-
 :::
 
 ::: notes
-
-This is my note.
-
-- It can contain Markdown
-- like this list
-
+x
 :::
 
 ### Who am I? (Who are any of us, really?)
@@ -52,9 +43,9 @@ This is my note.
 
 ::: {.column width=60%}
 #### Now
-- Three degrees from the now-R2 university (1995, 1998, 2018)
-- Mostly-solo practitioner of all things RCD at the same university (2017--)
-- Perpetually online member of multiple RCD organizations (2019--)
+- Three ME degrees from the now-R2 university (1995, 1998, 2018)
+- Mostly-solo practitioner of all things RCD at the same university (2000--2017, 2017--)
+- Perpetually online member of multiple RCD organizations (2018--)
 - Member of Campus Champions Leadership Team (2022--)
 - Compulsive advice-giver
 :::
@@ -68,10 +59,35 @@ This is my note.
 :::
 
 ::: notes
+x
+:::
 
-This is my note.
+# Computational and/or Storage Resources
 
-- It can contain Markdown
-- like this list
+## NSF
 
+### Slide
+
+x
+
+## DOE
+
+### Slide
+
+x
+
+# Services/Consultancies
+
+### Slide
+
+::: notes
+MATCHPlus, MATCHPremier, SGX3
+:::
+
+# Tools and Software
+
+### Slide
+
+::: notes
+Open XDMoD, Open OnDemand, Spack, ColdFront, OpenHPC
 :::

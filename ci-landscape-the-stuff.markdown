@@ -68,20 +68,41 @@ x
 
 x
 
+::: notes
+x
+:::
+
 ## DOE
 
 ### Slide
 
 x
 
-# Services/Consultancies
-
-### Slide
-
 ::: notes
-MATCHPlus, MATCHPremier, SGX3
+x
 :::
 
+# Services/Consultancies
+
+## MATCHPlus
+
+### MATCHPlus
+
+x
+
+::: notes
+x
+:::
+
+## MATCHPremier
+
+### MATCHPremier
+
+x
+
+::: notes
+x
+:::
 
 ## Engagement and Performance Operations Center (EPOC)
 
@@ -162,6 +183,8 @@ x
 
 ### Open XDMoD
 
+x
+
 ::: notes
 x
 :::
@@ -169,6 +192,8 @@ x
 ## Open OnDemand
 
 ### Open OnDemand
+
+x
 
 ::: notes
 x
@@ -178,6 +203,8 @@ x
 
 ### ColdFront
 
+x
+
 ::: notes
 x
 :::
@@ -185,6 +212,8 @@ x
 ## Spack
 
 ### Spack
+
+x
 
 ::: notes
 x

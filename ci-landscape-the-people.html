@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mike Renfro" />
+  <meta name="dcterms.date" content="2024-06-25" />
+  <title>The Cyberinfrastructure Landscape: Organizations</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">The Cyberinfrastructure Landscape: Organizations</h1>
+<p class="author">Mike Renfro</p>
+<p class="date">2024-06-25</p>
+</header>
+<h3 id="who-am-i-who-are-any-of-us-really">Who am I? (Who are any of us,
+really?)</h3>
+<div class="columns" data-align="center">
+<div class="column" style="width:50%;">
+<h4 id="back-in-the-day">Back in the day</h4>
+<ul>
+<li>ME student at a medium-sized public STEM-ish university who should
+have studied more instead of helping people do things in computer
+labs.</li>
+<li>Sysadmin/CAD/FEA co-op student at Oak Ridge National Lab before SGI
+Irix got its cameo in “Jurassic Park” (“It’s a Unix system: I know
+this!”).</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<figure>
+<img src="figures/mike-1990.jpg" style="width:100.0%"
+alt="Some skinny nerd, 1990" />
+<figcaption aria-hidden="true">Some skinny nerd, 1990</figcaption>
+</figure>
+</div>
+</div>
+<div class="notes">
+<p>To give you a bit of an idea where I come from in all of this, my
+LinkedIn bio that has all the fancy language about decades of experience
+supporting engineering research really comes down to this:</p>
+<p>I’m a self-diagnosed high-functioning ADHD guy who probably should
+have studied more than he helped people in computer labs.</p>
+<p>I lucked into a couple of co-op years at Oak Ridge National Lab doing
+a mix of CAD support, Unix systems administration, and actual
+engineering.</p>
+</div>
+<h3 id="who-am-i-who-are-any-of-us-really-1">Who am I? (Who are any of
+us, really?)</h3>
+<div class="columns" data-align="center">
+<div class="column" style="width:70%;">
+<h4 id="now">Now</h4>
+<ul>
+<li>Three ME degrees from the now-R2 university (1995, 1998, 2018)</li>
+<li>Mostly-solo practitioner of all things RCD at the same university
+(2000–2017, 2017–)</li>
+<li>Perpetually online member of multiple RCD organizations (2018–)</li>
+<li>Member of Campus Champions Leadership Team (2022–)</li>
+<li>Compulsive advice-giver</li>
+</ul>
+</div><div class="column" style="width:30%;">
+<figure>
+<img src="figures/mike-2023.jpg" style="width:100.0%"
+alt="Same nerd, not remotely skinny, 2023" />
+<figcaption aria-hidden="true">Same nerd, not remotely skinny,
+2023</figcaption>
+</figure>
+</div>
+</div>
+<div class="notes">
+<p>That eventually turned into a bunch of degrees from my original
+university, which I like to call a masters in shaking things and a PhD
+in breaking things.</p>
+<p>I stayed on as an R&amp;D engineer in a research center, and then as
+the first campus-wide HPC systems administrator in central IT.</p>
+<p>I’m a member of way too many RCD community groups, been on the Campus
+Champions leadership team for nearly 2 years, and I’m a compulsive
+advice giver and rabbit-hole-chaser.</p>
+<p>So for the folks who don’t have a lot of time for the rest of this
+talk, or for the new folks that may be overwhelmed by RCD, let me go
+ahead and get you what others have called the starter pack of RCD
+organizations and conferences where you can find other communities and
+resources as you need them.</p>
+</div>
+<h1 id="the-starter-pack">The Starter Pack</h1>
+<h2 id="campus-champions">Campus Champions</h2>
+<h3 id="campus-champions-1">Campus Champions</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<ul>
+<li>One of the original RCD communities (2008)</li>
+<li>Formerly funded by NSF XSEDE program</li>
+<li>Over 800 members from over 300 institutions in all 50 states</li>
+<li>Active mailing list for all topics and all RCD roles</li>
+<li>Monthly Zoom call with planned speaker/topic</li>
+<li>Monthly Zoom call for any other topics</li>
+<li>Additional visibility to their institutions’ NSF ACCESS usage</li>
+</ul>
+</div><div class="column" style="width:20%;">
+<p><img src="figures/campus-champions.jpg" style="width:80.0%" /></p>
+<p><a href="https://campuschampions.cyberinfrastructure.org"><img
+src="figures/qr-campus-champions.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>The first one is Campus Champions: this was the second RCD community
+that I joined about 5 years ago, the one that introduced me to Henry and
+other folks via the Virtual Residency.</p>
+<p>Campus Champions is one of the longest-running RCD communities,
+starting around 2008 and formerly funded by NSF’s Extreme Science and
+Engineering Discovery Environment (XSEDE). It currently has over 800
+members from every state, and it includes folks from every RCD role:
+facilitators, software engineers, systems administrators, etc.</p>
+<p>We’ve got an active mailing list and fairly active Slack, with two
+regularly-scheduled calls each month. One call has a specific topic and
+an invited speaker, while the other one is a more free-flowing community
+chat over any topic of interest to the attendees. Sometimes we start
+with something hot from the mailing list, other times from recent news
+items.</p>
+<p>One other advantage to Campus Champions is that even though we don’t
+have direct ties to XSEDE’s followup project, ACCESS, the ACCESS team
+does provide Campus Champions extra insight into their institutions’
+usage of ACCESS resources, which can help you guide your researchers
+toward more efficient usage or more suitable locations for their
+work.</p>
+</div>
+<h2 id="campus-research-computing-consortium-carcc">Campus Research
+Computing Consortium (CaRCC)</h2>
+<h3 id="campus-research-computing-consortium-carcc-1">Campus Research
+Computing Consortium (CaRCC)</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<p><img src="figures/CaRCC-overview.png" style="width:70.0%" /></p>
+</div><div class="column" style="width:20%;">
+<p><a href="https://carcc.org/"><img
+src="figures/qr-carcc.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>Another catch-all group similar to Campus Champions is the Campus
+Research Computing Consortium, or CaRCC.</p>
+<p>CaRCC has a pretty comprehensive structure of tracks, interest
+groups, and working groups. These are all ad hoc and community driven,
+and the tracks tend to have one Zoom call per month with a lot of behind
+the scenes coordination going on.</p>
+<p>The biggest thing I’ll applaud CaRCC for is their ongoing and
+invaluable work in professionalization of the RCD field, which helps
+translate RCD roles into job family matrices that I’ve used at Tennessee
+Tech, the RCD Nexus organization that puts together workshops and papers
+on workforce development and benchmarking your organization against
+others, and the RCD Capabilities Model to assist with that benchmarking
+and also with identifying the priorities for improving your
+organization.</p>
+<p>Now those organizations are all virtual, no cost to join, and
+extremely welcoming and accessible to new folks.</p>
+</div>
+<h2 id="pearc-conference-series">PEARC Conference Series</h2>
+<h3 id="pearc-conference-series-1">PEARC Conference Series</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<ul>
+<li>The de facto RCD people conference</li>
+<li>Small enough (782 attendees in 2023)</li>
+<li>Full range of publishing options
+<ul>
+<li>full papers</li>
+<li>short papers</li>
+<li>posters</li>
+<li>visualization showcase</li>
+</ul></li>
+<li>Tutorials/workshops</li>
+<li>Birds of a Feather (BoF) sessions</li>
+<li>Panel discussions</li>
+</ul>
+<p>Go at least once.</p>
+</div><div class="column" style="width:20%;">
+<p><img src="figures/pearc.png" /></p>
+<p><a href="https://pearc.acm.org/"><img
+src="figures/qr-pearc.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>But if you’re up for some travel, and don’t know where to go to
+improve your RCD program or yourself, here’s a couple more options.</p>
+<p>The Association for Computing Machinery hosts an annual Practical
+Experiences in Advanced Research Computing Conference (PEARC), and this
+is by far my top priority conference for the last few years. It’s the de
+facto RCD people conference, and with around 800 people in attendance
+last year, it’s small enough to where you can meet a lot of people doing
+work similar to you, and not get overwhelmed.</p>
+<p>The conference is a normal academic/professional conference with
+paper and presntation tracks, a poster session, and a visualization
+showcase where students, faculty, and staff can show off their work and
+get ideas to take back with them.</p>
+<p>There’s a day of workshops and tutorials on a huge range of topics,
+and co-located events frmo CaRCC and RCD Nexus on the Sunday before the
+actual conference starts.</p>
+<p>Go to PEARC at least once, but as I said previously, it’s on my hot
+list every year because of the people that attend.</p>
+</div>
+<h2 id="supercomputing-conference-series">Supercomputing Conference
+Series</h2>
+<h3 id="supercomputing-conference-series-1">Supercomputing Conference
+Series</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<ul>
+<li>The de facto HPC stuff conference</li>
+<li>Huge</li>
+<li>Like, really huge (14,000 attendees in 2023)</li>
+<li>Lots of vendors</li>
+<li>Lots of recruiting</li>
+<li>Student Cluster Competition</li>
+<li>SCinet (local network providing 6.71 Tb/s WAN connectivity in
+2023)</li>
+</ul>
+<p>Go at least once, but just once is probably ok, too.</p>
+</div><div class="column" style="width:20%;">
+<p><img src="figures/sc.png" /></p>
+<p><a href="https://supercomputing.org/"><img
+src="figures/qr-sc.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>The Supercomputing conference series is probably the most famous
+conference, and it’s pretty far on the other end of the spectrum from
+PEARC.</p>
+<p>It’s huge, around 14000 attendees last year. Tons of vendors, giant
+exhibition space, lots of recruiting for graduate programs, national
+labs, etc. One of the two Top 500 lists for fastest HPCs each year is
+always announced at SC.</p>
+<p>They host a student cluster competition every year, where teams from
+all over the world compete to squeeze the most performance out of a
+limited power budget and get the best performance on a range of
+computational codes.</p>
+<p>The SCinet network is also a technical wonder, last year they strung
+a lot of miles of cable around the convention center and provided nearly
+7 terabits of Internet bandwidth to the attendees and exhibitors.</p>
+<p>I haven’t been to SC yet, but should be going to this year’s. From
+what I’ve heard, for some people, going once is enough for the spectacle
+of everything, but you may find you want to go back repeatedly.</p>
+</div>
+<h2 id="virtual-residency-program">Virtual Residency Program</h2>
+<h3
+id="virtual-residency-program-youre-in-this-photo-we-hope-you-like-it">Virtual
+Residency Program (you’re in this photo, we hope you like it)</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<ul>
+<li>Henry’s already explained what we’re doing here</li>
+<li>(Mike’s opinion) best value experience for new RCD professionals,
+especially for under-resourced institutions or emerging programs</li>
+</ul>
+</div><div class="column" style="width:20%;">
+
+</div>
+</div>
+<div class="notes">
+<p>And last but not least on the starter pack is where you’re at right
+now.</p>
+<p>I’m eternally grateful to Henry for helping me attend the virtual
+residency in 2019, because it was and is by far the best value
+experience for RCD professionals, especially if you’re an
+under-resourced institution or emerging program like I’ve been for the
+last several years.</p>
+</div>
+<h2 id="where-to-go-from-here">Where to Go from Here?</h2>
+<h3 id="where-to-go-from-here-1">Where to go from here?</h3>
+<div class="columns" data-align="bottom">
+<div class="column" style="width:50%;">
+<figure>
+<img src="figures/lots-of-groups.png" style="width:100.0%"
+alt="We have lots more groups (Cragin)" />
+<figcaption aria-hidden="true">We have lots more groups
+(Cragin)</figcaption>
+</figure>
+</div><div class="column" style="width:50%;">
+<figure>
+<img src="figures/xkcd-standards.png" style="width:100.0%"
+alt="Not why we have lots more groups" />
+<figcaption aria-hidden="true">Not why we have lots more
+groups</figcaption>
+</figure>
+</div>
+</div>
+<div class="notes">
+<p>Ok, so beyond the starter pack, there’s dozens if not hundreds of RCD
+and RCD-adjacent groups, conferences, etc. that you can get into.</p>
+<p>Though there’s some overlap among different groups, they all have a
+little different focus, priorities, and structure.</p>
+<p>So how to make sense of them, so you can direct yourself or your
+coworkers to the right ones?</p>
+</div>
+<h3 id="how-to-make-sense-of-all-these-groups">How to make sense of all
+these groups?</h3>
+<p>Campus Research Computing Consortium’s <a
+href="https://carcc.org/rcd-professionalization/facings/">facings</a>
+(somewhat blurry boundaries, still):</p>
+<ol type="1">
+<li>Researcher-facing: outreach, advanced application support,
+co-creating along the research lifecycle</li>
+<li>Data-facing: data discovery/collection, analysis/visualization,
+curation, preservation, policy compliance</li>
+<li>Software-facing: software package management, research software
+development, optimization</li>
+<li>Systems-facing: systems administration and operations, networking,
+architecture, security</li>
+<li>Strategy- and Policy-facing: leadership, institutional alignment,
+culture, funding, external partnerships</li>
+</ol>
+<div class="notes">
+<p>I’m going to break these groups up by what CaRCC calls facings, the
+broad categories of work that an RCD professional might be responsible
+for.</p>
+<p>Researcher facing for the folks that work directly with researchers,
+the trainers, the onboarders, etc. Data-facing for the data collection,
+management, archival, and related duties. Software facing for software
+development, profiling, and similar. Systems facing for your systems and
+network administrators, engineers, and architects. And strategy/policy
+facing for the folks that deal with leadership roles, institutional
+alignment, funding, and external partnerships.</p>
+</div>
+<h1 id="researcher-facing">Researcher-Facing</h1>
+<h2 id="software-carpentry">Software Carpentry</h2>
+<h3 id="software-carpentry-1">Software Carpentry</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<blockquote>
+<p>Since 1998, Software Carpentry has been teaching researchers the
+computing skills they need to get more done in less time and with less
+pain. Our <a href="https://carpentries.org/instructors/">volunteer
+instructors</a> have run <a
+href="https://software-carpentry.org/workshops/past/">hundreds of
+events</a> for more than 34,000 researchers since 2012. All of our <a
+href="https://software-carpentry.org/lessons/">lesson materials</a> are
+freely reusable under the <a
+href="https://software-carpentry.org/license/#cc-by">Creative Commons -
+Attribution license</a>.</p>
+</blockquote>
+<p>– https://software-carpentry.org/about/</p>
+</div><div class="column" style="width:20%;">
+<p><img src="figures/swc.png" /></p>
+<p><a href="https://software-carpentry.org/"><img
+src="figures/qr-software-carpentry.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>From the researcher-facing side, especially for introductory user
+training, Software Carpentry and its related organizations offer some of
+the best, most widely-tested, low barrier to entry training materials
+and instructor training out there.</p>
+<p>We’ve used Software Carpentry materials for everyone from advanced
+high school students through our research faculty, and going through
+their instructor training will likely give you new insight into the
+science of pedagogy and instructional design. Their core curriculum
+covers the Unix shell, Git for version control, and a couple different
+options for data processing in both R and Python.</p>
+</div>
+<h2 id="cyberambassadors">CyberAmbassadors</h2>
+<h3 id="cyberambassadors-1">CyberAmbassadors</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<ul>
+<li>Originally an NSF workforce development project for RCD
+professionals</li>
+<li>Now expanded to include STEM students and professionals from all
+disciplines</li>
+<li>Strengthening skills in:
+<ul>
+<li>communications</li>
+<li>teamwork</li>
+<li>leadership</li>
+</ul></li>
+<li>PIs inducted into American Society for Engineering Education Hall of
+Fame in 2023</li>
+</ul>
+</div><div class="column" style="width:20%;">
+<p><img src="figures/cyberambassadors.jpg" /></p>
+<p><a href="https://sites.google.com/msu.edu/cyberambassadors/"><img
+src="figures/qr-cyberambassadors.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>The CyberAmbassadors program has a few time slots during the virtual
+residency this year, so I’ll let them explain in more detail, but in
+general, they’re a recognized leader in training for more of the soft
+skills that complement the technical ability you or your coworkers have.
+They offer workshops in communications, teamwork, and leadership, and
+last year, the PIs were inducted into the ASEE hall of fame for their
+work in this program.</p>
+</div>
+<h1 id="data-facing">Data-Facing</h1>
+<h2 id="research-data-access-and-preservation-association-rdap">Research
+Data Access and Preservation Association (RDAP)</h2>
+<h3
+id="research-data-access-and-preservation-association-rdap-1">Research
+Data Access and Preservation Association (RDAP)</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<blockquote>
+<p>[RDAP] supports an engaged community of information professionals
+committed to creating, maintaining, advancing, and teaching best
+practices for research data, access, and preservation.</p>
+<p>The RDAP community brings together a variety of individuals,
+including data managers and curators, librarians, archivists,
+researchers, educators, students, technologists, and data scientists
+from academic institutions, data centers, funding agencies, and industry
+who represent a wide range of STEM disciplines, social sciences, and
+humanities.</p>
+</blockquote>
+<p>– https://rdapassociation.org/</p>
+</div><div class="column" style="width:20%;">
+<p><img src="figures/RDAP_Logo_Color.png" /></p>
+<p><a href="https://rdapassociation.org"><img
+src="figures/qr-rdap.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>RDAP is geared toward your data facing people, your research
+librarians, etc.</p>
+<p>I’m the child of a less-fancy public-school librarian, and I love
+being around those kinds of folks. RDAP finished their annual conference
+just recently, and the QR code and link there will lead you to their
+full set of YouTube recordings, posters, slides, and other materials for
+the entire conference.</p>
+<p>You can always trust the librarians to adopt the FAIR principles on
+all their stuff. Really valuable material that you generally won’t get
+elsewhere in the RCD ecosystem.</p>
+</div>
+<h2 id="data-carpentry">Data Carpentry</h2>
+<h3 id="data-carpentry-1">Data Carpentry</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<blockquote>
+<p>Data Carpentry develops and teaches workshops on the fundamental data
+skills needed to conduct research. Our mission is to provide researchers
+high-quality, domain-specific training covering the full lifecycle of
+data-driven research.</p>
+</blockquote>
+<p>– https://datacarpentry.org</p>
+<p>Curricula for: <a
+href="https://datacarpentry.org/lessons/#astronomy-curriculum">astronomy</a>,
+<a
+href="https://datacarpentry.org/lessons/#ecology-workshop">ecology</a>,
+<a
+href="https://datacarpentry.org/lessons/#genomics-workshop">genomics</a>,
+<a
+href="https://datacarpentry.org/lessons/#geospatial-curriculum">geospatial
+data</a>, <a
+href="https://datacarpentry.org/lessons/#image-processing-curriculum">image
+processing</a>, <a
+href="https://datacarpentry.org/lessons/#social-science-curriculum">social
+sciences</a></p>
+</div><div class="column" style="width:20%;">
+<p><img src="figures/DC_logo_vision.png" /></p>
+<p><a href="https://datacarpentry.org/"><img
+src="figures/qr-data-carpentry.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>Data Carpentry is a sibling organization to Software Carpentry. It
+focuses on domain-specific training materials in a variety of physical
+and social sciences, with some overlap with the Software Carpentry
+materials. But it gets to be more focused on what they cover to match
+the needs of the specific field.</p>
+</div>
+<h2 id="library-carpentry">Library Carpentry</h2>
+<h3 id="library-carpentry-1">Library Carpentry</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<blockquote>
+<p>Library Carpentry focuses on building software and data skills within
+library and information-related communities. Our goal is to empower
+people in these roles to use software and data in their own work and to
+become advocates for and train others in efficient, effective and
+reproducible data and software practices.</p>
+</blockquote>
+<p>– https://librarycarpentry.org/about/</p>
+</div><div class="column" style="width:20%;">
+<p><img src="figures/lc_logo_1_inverted.png" /></p>
+<p><a href="https://librarycarpentry.org/"><img
+src="figures/qr-library-carpentry.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>Library Carpentry is more geared for the library and information
+professionals. They offer materials on how librarians can get familiar
+with software automation so they can promote that elsewhere at their
+institution. It’s synergistic with the other Carpentries areas, and can
+help your libraries provide a gateway to your RCD services.</p>
+</div>
+<h1 id="software-facing">Software-Facing</h1>
+<h2 id="us-research-software-engineer-association-us-rse">US Research
+Software Engineer Association (US-RSE)</h2>
+<h3 id="us-research-software-engineer-association-us-rse-1">US Research
+Software Engineer Association (US-RSE)</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<blockquote>
+<p>[US-RSE] is a community-driven effort focused on the increasingly
+important role of the Research Software Engineer.</p>
+</blockquote>
+<p>– https://us-rse.org/about/</p>
+<blockquote>
+<p>We like an inclusive definition of [RSEs] to encompass those who
+regularly use expertise in programming to advance research. This
+includes researchers who spend a significant amount of time programming,
+full-time software engineers writing code to solve research problems,
+and those somewhere in-between. We aspire to apply the skills and
+practices of software development to research to create more robust,
+manageable, and sustainable research software.</p>
+</blockquote>
+<p>– https://us-rse.org/about/what-is-an-rse/</p>
+</div><div class="column" style="width:20%;">
+<p><img src="figures/USRSE_Pride_6ColorChevronsSquare.png" /></p>
+<p><a href="https://us-rse.org/"><img
+src="figures/qr-us-rse.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>For the software-facing folks, the dominant organization in the US is
+the US Research Software Engineer Association, or US-RSE.</p>
+<p>They’re a very inclusive group where not everyone is expected to be a
+professional software developer, but they’re where you want your
+developers to be. There’s so much software out there that’s just good
+enough to get the job done, but not good enough to scale up or out, and
+US-RSE can help there.</p>
+<p>Also, US-RSE and the Academic Data Software Alliance collaborated on
+a comprehensive career guidebook for data scientists and RSEs that
+nicely complements some of what CaRCC does with broader RCD
+professionalization. You’ll find a link to that in US-RSE’s Resources
+page.</p>
+</div>
+<h1 id="systems-facing">Systems-Facing</h1>
+<h2 id="acm-sighpc-systems-professionals">ACM SIGHPC Systems
+Professionals</h2>
+<h3 id="acm-sighpc-systems-professionals-1">ACM SIGHPC Systems
+Professionals</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<blockquote>
+<p>We are a SIGHPC ACM Chapter focused on the systems staff who stand up
+high performance systems. This includes system admins, storage admins,
+networking admins, facilities staff—everyone who participates in the
+process of physically standing up HPC systems. Our community is focused
+on sharing solutions and failures associated with these complicated,
+novel, cutting-edge systems.</p>
+</blockquote>
+<p>– https://sighpc-syspros.org/</p>
+</div><div class="column" style="width:20%;">
+<p><a href="https://sighpc-syspros.org/"><img
+src="figures/qr-sighpc-syspros.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>ACM’s SIGHPC Systems Professionals group was the first RCD group I
+joined around 2018. I was hired into an enterprise systems
+administration group on account of my systems-facing skills, but even
+though I’d been running HPCs at smaller scales for several years, SIGHPC
+SysPros showed me so much more that I could be doing and let me learn
+from others’ mistakes and successes.</p>
+<p>Demographically, this group is far from diverse, but it’s very
+welcoming and practically un-stumpable on deep systems-related
+questions. They have a BOF and a social event every year at PEARC, and
+an incredibly active Slack where most of the year-round activity
+occurs.</p>
+</div>
+<h2 id="linux-clusters-institute-lci">Linux Clusters Institute
+(LCI)</h2>
+<h3 id="linux-clusters-institute-lci-1">Linux Clusters Institute
+(LCI)</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<blockquote>
+<p>The Linux Clusters Institute (LCI) is providing education and
+advanced technical training for the deployment and use of computing
+clusters to the high performance computing community worldwide.</p>
+<p>Founded in 1998, it includes some of the world’s foremost specialists
+in building and deploying clustered high-performance computing systems.
+LCI is the premier international forum to share information on
+management, administration, and advanced computing techniques for high
+performance clustered computing.</p>
+</blockquote>
+<p>– https://linuxclustersinstitute.org</p>
+</div><div class="column" style="width:20%;">
+<p><img src="figures/cropped-MISC100421_LCI_Logo-2.png" /></p>
+<p><a href="https://linuxclustersinstitute.org/"><img
+src="figures/qr-lci.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>I’ve not attended any Linux Clusters Institute training, but it’s
+regarded as some of the best training for your systems-facing people to
+level up their HPC administration skills. Every time there’s a new LCI
+workshop, I see a new batch of people join SIGHPC SysPros all in a
+bunch.</p>
+</div>
+<h1 id="strategy--and-policy-facing">Strategy- and Policy-Facing</h1>
+<h2 id="coalition-for-academic-scientific-computation-casc">Coalition
+for Academic Scientific Computation (CASC)</h2>
+<h3 id="coalition-for-academic-scientific-computation-casc-1">Coalition
+for Academic Scientific Computation (CASC)</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<blockquote>
+<p>The mission of CASC is to:</p>
+<ol type="1">
+<li>Advocate for the importance of and need for public and private
+investment in research computing and data services to support academic
+research.</li>
+<li>Serve as a trusted advisor to federal agencies on the direction of
+relevant funding programs.</li>
+<li>Actively engage in discussions of policies related to research
+computing and data services.</li>
+<li>Foster advancement of a robust and diverse community of current and
+emerging leaders in this field.</li>
+<li>Provide a forum for the community to share strategic ideas and best
+practices.</li>
+</ol>
+</blockquote>
+</div><div class="column" style="width:20%;">
+<p><img src="figures/casc.png" /></p>
+<p><a href="https://casc.org/"><img src="figures/qr-casc.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>The Coalition for Academic Scientific Computation (CASC) is the
+premier group for the strategy and policy-facing folks in RCD. It has
+the closest ties to the federal agencies that drive a lot of RCD
+funding, and communicates the concerns and needs of the RCD community
+toward those agencies.</p>
+<p>There is a membership cost on CASC, unlike most of the rest of the
+groups I’ve talked about, and I’ll admit their conferences are not my
+comfort zone due to impostor syndrome. But they fill a unique role in
+the RCD ecosystem, and I’m grateful they’re doing what I can’t do as
+easily.</p>
+</div>
+<h2 id="educause-research-computing-and-data-community-group">EDUCAUSE
+Research Computing and Data Community Group</h2>
+<h3 id="educause-research-computing-and-data-community-group-1">EDUCAUSE
+Research Computing and Data Community Group</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<blockquote>
+<p>This community group discusses IT support for institutional research
+missions. The two broad categories of issues are: IT support for
+research administration, and IT support for research activities. The
+former includes: pre- and post-award support, interacting with Federal
+grant systems, regulatory compliance, and intellectual property
+management. The latter includes: centralized vs. decentralized
+approaches, high performance computing, advanced networking, informatics
+and enabling multidisciplinary/interdisciplinary/inter-institutional
+work.</p>
+</blockquote>
+</div><div class="column" style="width:20%;">
+<p><img src="figures/educause.jpg" /></p>
+<p><a
+href="https://www.educause.edu/community/research-computing-and-data-community-group"><img
+src="figures/qr-educause-rcd-cg.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>Another externally-facing RCD group is part of EDUCAUSE, which
+probably everyone’s central IT group belongs to, even if you’ve never
+heard of them. The RCD community group in EDUCAUSE gets a bit farther
+afield than other groups in addressing support for the administration of
+research rather than the research itself, but they’ve got an interesting
+niche between RCD groups and more of the enterprise IT folks.</p>
+</div>
+<h2 id="regulated-research-community-of-practice-rrcop">Regulated
+Research Community of Practice (RRCoP)</h2>
+<h3 id="regulated-research-community-of-practice-rrcop-1">Regulated
+Research Community of Practice (RRCoP)</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<blockquote>
+<p>The Regulated Research Community of Practice (RRCoP) builds a network
+of people able to help each other in implementing an affordable but
+effective cybersecurity and compliance program at academic
+institutions.</p>
+</blockquote>
+<p>– https://www.regulatedresearch.org/about</p>
+</div><div class="column" style="width:20%;">
+<p><img src="figures/rrcop.png" /></p>
+<p><a href="https://www.regulatedresearch.org/"><img
+src="figures/qr-rrcop.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>Finally, the Regulated Research Community of Practice (RRCoP) is the
+best meeting place for folks working at the intersection of
+cybersecurity, compliance, and research.</p>
+<p>If your institution is just getting into more sensitive research
+areas, especially Department of Defense areas, RRCoP can be an
+invaluable sanity check for everyone at your campus. At times, security
+measures can go overboard in an abundance of caution, risk management,
+and unknowns, but RRCoP has been extremely helpful in gathering what
+other more experienced institutions are doing to secure their more
+regulated data.</p>
+</div>
+</body>
+</html>

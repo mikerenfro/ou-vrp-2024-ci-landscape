@@ -8,11 +8,11 @@ title: "The Cyberinfrastructure Landscape: Systems, Providers, Technologies"
 date: 2024-06-25
 aspectratio: 169
 theme: Cookeville
-colorlinks: true
-linkcolor: white
-filecolor: white
-citecolor: blue
-urlcolor: blue
+# colorlinks: true
+# linkcolor: white
+# filecolor: white
+# citecolor: blue
+# urlcolor: blue
 section-titles: false
 toc: false
 ---

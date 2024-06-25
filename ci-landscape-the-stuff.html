@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mike Renfro" />
+  <meta name="dcterms.date" content="2024-06-25" />
+  <title>The Cyberinfrastructure Landscape: Systems, Providers, Technologies</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">The Cyberinfrastructure Landscape: Systems, Providers,
+Technologies</h1>
+<p class="author">Mike Renfro</p>
+<p class="date">2024-06-25</p>
+</header>
+<h3 id="who-am-i-who-are-any-of-us-really">Who am I? (Who are any of us,
+really?)</h3>
+<div class="columns" data-align="center">
+<div class="column" style="width:50%;">
+<h4 id="back-in-the-day">Back in the day</h4>
+<ul>
+<li>ME student at a medium-sized public STEM-ish university who should
+have studied more instead of helping people do things in computer
+labs.</li>
+<li>Sysadmin/CAD/FEA co-op student at Oak Ridge National Lab before SGI
+Irix got its cameo in “Jurassic Park” (“It’s a Unix system: I know
+this!”).</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<figure>
+<img src="figures/mike-1990.jpg" style="width:100.0%"
+alt="Some skinny nerd, 1990" />
+<figcaption aria-hidden="true">Some skinny nerd, 1990</figcaption>
+</figure>
+</div>
+</div>
+<div class="notes">
+<p>x</p>
+</div>
+<h3 id="who-am-i-who-are-any-of-us-really-1">Who am I? (Who are any of
+us, really?)</h3>
+<div class="columns" data-align="center">
+<div class="column" style="width:70%;">
+<h4 id="now">Now</h4>
+<ul>
+<li>Three ME degrees from the now-R2 university (1995, 1998, 2018)</li>
+<li>Mostly-solo practitioner of all things RCD at the same university
+(2000–2017, 2017–)</li>
+<li>Perpetually online member of multiple RCD organizations (2018–)</li>
+<li>Member of Campus Champions Leadership Team (2022–)</li>
+<li>Compulsive advice-giver</li>
+</ul>
+</div><div class="column" style="width:30%;">
+<figure>
+<img src="figures/mike-2023.jpg" style="width:100.0%"
+alt="Same nerd, not remotely skinny, 2023" />
+<figcaption aria-hidden="true">Same nerd, not remotely skinny,
+2023</figcaption>
+</figure>
+</div>
+</div>
+<div class="notes">
+<p>So, in terms of systems, providers, and technologies, there’s a huge
+array of those out there.</p>
+<p>Rather than give you every detail about every one of them and running
+out of time, let me start with the resources you can use to
+<em>find</em> more of those resources, especially computational and
+storage resources outside your institution.</p>
+<p>Depending on your or your users’ background, you might get
+overwhelmed by the variety of options, or your users might make a
+suboptimal choice based off what they’re used to using, even when better
+resources exist.</p>
+<p>So let’s take a look at some of the federally-funded resources and
+how you can narrow things down a bit.</p>
+</div>
+<h1 id="computational-andor-storage-resources">Computational and/or
+Storage Resources</h1>
+<h2 id="national-science-foundation">National Science Foundation</h2>
+<h3 id="access-allocations-portal">ACCESS Allocations Portal</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<p><img src="figures/access-allocations-home.png"
+style="width:80.0%" /></p>
+<p>https://allocations.access-ci.org/</p>
+</div><div class="column" style="width:20%;">
+<p><a href="https://allocations.access-ci.org/"><img
+src="figures/qr-access-allocations-home.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>The critical mass of NSF-funded resources can be found via the
+Advanced Cyberinfrastructure Coordination Ecosystem: Services &amp;
+Support program, or ACCESS.</p>
+<p>And ACCESS’ allocations portal is the starting point for getting set
+up on ACCESS, whether for yourself or for your researchers.</p>
+</div>
+<h3 id="access-project-types">ACCESS Project Types</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<dl>
+<dt>Explore</dt>
+<dd>
+<p>for resource evaluation, grad student projects, small
+classes/training events, benchmarking, development/porting, other
+small-scale cases</p>
+</dd>
+<dt>Discover</dt>
+<dd>
+<p>for grants with modest needs, Campus Champions, large
+classes/training events, NSF graduate fellowships, gateway
+development</p>
+</dd>
+<dt>Accelerate</dt>
+<dd>
+<p>for experienced users with mid-scale needs, multi-grant programs,
+collaborative projects, growing gateways</p>
+</dd>
+<dt>Maximize</dt>
+<dd>
+<p>largest-scale research activities</p>
+</dd>
+</dl>
+</div><div class="column" style="width:20%;">
+<p><a href="https://allocations.access-ci.org/project-types"><img
+src="figures/qr-access-allocations-project-types.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>The first thing ACCESS needs from you is a project
+categorization.</p>
+<p>A whole lot of your use cases can be met with the lower two project
+types. They’ll accommodate classes or training workshops, your NSF
+graduate fellowship recipients, and if you’re a smaller institution,
+even these smaller project types can overwhelm your local resources.</p>
+<p>But ACCESS can also accommodate the highest scale of research
+activities, all the way out to the ones that make international news for
+black holes and subatomic particle discoveries.</p>
+</div>
+<h3 id="access-project-types-1">ACCESS Project Types</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<p>Explore, Discover, Accelerate:</p>
+<ul>
+<li>run for grant duration or 12 months</li>
+<li>can be requested any time</li>
+<li>allow multiple projects</li>
+</ul>
+<dl>
+<dt>Explore</dt>
+<dd>
+<p>400k credits, only an overview required</p>
+</dd>
+<dt>Discover</dt>
+<dd>
+<p>1.5M credits, 1-page proposal required</p>
+</dd>
+<dt>Accelerate</dt>
+<dd>
+<p>3M credits, 3-page max proposal required, subject to merit review</p>
+</dd>
+<dt>Maximize</dt>
+<dd>
+<p>usually only 1 project allowed, 10-page max proposal required,
+subject to merit review, requests accepted every 6 months</p>
+</dd>
+</dl>
+</div><div class="column" style="width:20%;">
+<p><a href="https://allocations.access-ci.org/project-types"><img
+src="figures/qr-access-allocations-project-types.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>The ACCESS procedures are a vast improvement over XSEDE’s in terms of
+barriers to entry, flexibility, and responsiveness.</p>
+<p>No shade on XSEDE for what it enabled, but ACCESS learned a lot of
+lessons from XSEDE.</p>
+<p>In particular, all but the highest tier of ACCESS request can be
+submitted at any time during the year, and have pretty small
+justification requirements.</p>
+<p>Your project is awarded credits that can be applied to any ACCESS
+resource, and any unused resources can be exchanged back into credits.
+So you can do more exploration and maybe make a few more small mistakes
+without jeopardizing research progress.</p>
+</div>
+<h3 id="access-resource-catalog">ACCESS Resource Catalog</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<p><img src="figures/access-resource-catalog.png" /></p>
+</div><div class="column" style="width:20%;">
+<p><a href="https://allocations.access-ci.org/resources/"><img
+src="figures/qr-access-resource-catalog.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>As you’re working on the documentation for the ACCESS project you’ll
+submit, you can also check out ACCESS’ resource catalog.</p>
+<p>It has somewhere on the order of 40 different services listed, and
+there’s no way you’ll want to go through all of them one at a time.</p>
+<p>So they provide some plain-language filters on the left where you and
+your researchers can narrow down the type of resource you’re interested
+in, and then you can get more information on each of them by clicking
+their entry in the list on the right.</p>
+<p>I’m going to give you a brief survey of some of the newest and maybe
+the most interesting resources on the list, but by all means, explore
+through all the filtering options to find what works best, and reach out
+to ACCESS or others in the RCD communities for advice if needed.</p>
+</div>
+<h3 id="stampede3-at-texas-advanced-computing-center-tacc">Stampede3 at
+Texas Advanced Computing Center (TACC)</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<ul>
+<li>20 Intel Sapphire Rapids nodes each with 4 Intel GPUs, 128 GB
+HBM</li>
+<li>560 Intel Sapphire Rapids nodes (no GPUs), 128 GB HBM</li>
+<li>1060 Intel Skylake nodes, 192 GB RAM</li>
+<li>224 Intel Ice Lake nodes, 256 GB RAM</li>
+<li>10 PB VAST (<code>$SCRATCH</code>) + 1 TB Lustre
+(<code>$WORK</code>)</li>
+<li>100 Gb Omni-Path networking</li>
+<li>Intended for:
+<ul>
+<li>parallel applications scalable to 10,000+ cores</li>
+<li>general purpose computing</li>
+<li>throughput computing</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:20%;">
+<p><a href="https://docs.tacc.utexas.edu/hpc/stampede3/"><img
+src="figures/qr-stampede3.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>Texas Advanced Computing Center at UT Austin has Stampede3, an
+absolutely enormous HPC installation with over 1800 nodes and a mix of
+Intel GPUs, high bandwidth memory, and high speed networking.</p>
+<p>Though it’s more than capable of handling application runs at the
+tens of thousands of cores scale, they’ll also take smaller sized jobs
+and high throughput computing applications.</p>
+<p>This just launched in late 2023, and is a successor to TACC’s
+successful Stampede and Stampede2 installations.</p>
+</div>
+<h3
+id="delta-at-national-center-for-supercomputing-applications-ncsa">Delta
+at National Center for Supercomputing Applications (NCSA)</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<ul>
+<li>All using AMD 7763 CPUs</li>
+<li>132 nodes with 128 cores and 256 GB RAM</li>
+<li>100 nodes with 64 cores, 256 GB RAM, and 4 NVIDIA A40 CPUs</li>
+<li>100 nodes with 64 cores, 256 GB RAM, and 4 NVIDIA A100 GPUs</li>
+<li>6 nodes with 128 cores, 2048 GB RAM, and 8 NVIDIA A100 GPUs</li>
+<li>1 node with 128 cores, 2048 GB RAM, and 8 AMD MI100 GPUs</li>
+<li>6 PB Lustre for <code>$HOME</code> and <code>$SCRATCH</code></li>
+<li>200 Gb HPE/Cray Slingshot networking</li>
+</ul>
+</div><div class="column" style="width:20%;">
+<p><a href="https://docs.ncsa.illinois.edu/systems/delta/"><img
+src="figures/qr-delta.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>Another new system is at the University of Illinois’ National Center
+for Supercomputing Applications.</p>
+<p>NCSA is basically the motherland of academic supercomputing for me,
+and their new Delta system is very GPU-heavy for any and all accelerated
+simulation, AI, deep learning, and similar applications.</p>
+<p>They may not be the absolute newest, most bleeding-edge hardware, but
+800+ Ampere GPUs is nothing to sneeze at.</p>
+</div>
+<h3 id="bridges-2-at-pittsburgh-supercomputing-center-psc">Bridges-2 at
+Pittsburgh Supercomputing Center (PSC)</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<ul>
+<li>488 nodes with 128 AMD 7742 cores and 256 GB RAM</li>
+<li>16 nodes with 128 AMD 7742 cores and 512 GB RAM</li>
+<li>4 nodes with 96 Intel Cascade Lake cores and 4096 GB RAM</li>
+<li>24 nodes with 40 Intel Cascade Lake cores, 512 GB RAM, and 8 NVIDIA
+V100 GPUs (32 GB)</li>
+<li>9 nodes with 40 Intel Cascade Lake cores, 192 GB RAM, and 8 NVIDIA
+V100 GPUs (16 GB)</li>
+<li>1 node with 48 Intel Skylake cores, 1536 GB RAM, and 16 NVIDIA V100
+GPUs (32 GB)</li>
+<li>15 PB Lustre for <code>$PROJECT</code></li>
+<li>200 Gb Infiniband networking</li>
+</ul>
+</div><div class="column" style="width:20%;">
+<p><a href="https://www.psc.edu/resources/bridges-2/"><img
+src="figures/qr-bridges-2.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>Bridges-2 at the Pittsburgh Supercomputing Center managed by Carnegie
+Mellon and the University of Pittsburgh is a long-standing resource
+spanning the XSEDE and the ACCESS programs.</p>
+<p>Again, not the most bleeding edge hardware, but for certain
+applications, their extreme memory nodes with 4 TB of RAM each are
+invaluable.</p>
+<p>Bridges-2 has long been my go-to resource when my users outgrow what
+I can do, or when a backhoe takes out my data center’s power, leading to
+a weeks-long storage outage last year.</p>
+</div>
+<h3 id="aces-at-texas-am-university">ACES at Texas A&amp;M
+University</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<ul>
+<li>130 nodes, 11888 cores</li>
+<li>Mostly Intel Sapphire Rapids, some Intel Ice Lake, Intel Cascade
+Lake, and AMD Rome</li>
+<li>Tons of mostly-composable accelerators:
+<ul>
+<li>GPUs: NVIDIA H100 and A30, Intel (coming soon)</li>
+<li>FPGAs: Bittware Agilex, Intel D5005</li>
+<li>Coprocessors: NextSilicon</li>
+<li>Optane memory modules</li>
+</ul></li>
+<li>Non-composable accelerators:
+<ul>
+<li>Graphcore IPUs: GC200, Bow-2000</li>
+<li>NEC Vector Engine: Type 20B-P</li>
+</ul></li>
+<li>2.3 PB Lustre</li>
+<li>200 Gb Infiniband networking</li>
+</ul>
+</div><div class="column" style="width:20%;">
+<p><a href="https://hprc.tamu.edu/kb/Quick-Start/ACES/"><img
+src="figures/qr-aces.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>Now ACES at Texas A&amp;M is quite a bit different than Stampede3,
+Bridges-2, or Delta.</p>
+<p>Its niche is in software-defined architectures and composability of
+resources more than raw compute power.</p>
+<p>They’ve got a mix of Intel and AMD CPUs, but the main draw there is
+the wide range of accelerators: not just GPUs. but FPGAs, coprocessors,
+vector engines, and intelligence processing units.</p>
+<p>Most of those accelerators can be shared across multiple nodes,
+leading to an incredibly flexible facility for some of the more uncommon
+use cases.</p>
+</div>
+<h3 id="jetstream2-at-indiana-university">Jetstream2 at Indiana
+University</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<ul>
+<li>Hybrid-cloud platform for flexible, on-demand, programmable
+cyberinfrastructure tools</li>
+<li>Interactive virtual machine services</li>
+<li>Infrastructure and orchestration services for research and
+education</li>
+<li>AMD Milan CPUs (128 per node)</li>
+<li>360 NVIDIA A100 GPUs</li>
+<li>512–1024 GB RAM</li>
+<li>100 Gb Ethernet</li>
+</ul>
+</div><div class="column" style="width:20%;">
+<p><a href="https://docs.jetstream-cloud.org/"><img
+src="figures/qr-jetstream2.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>The last ACCESS facility I want to talk about is Jetstream2 at
+Indiana University.</p>
+<p>While the rest of the facilities so far have been for traditional
+HPC, Jetstream2 is a private cloud environment suited for on-demand
+cyberinfrastructure needs.</p>
+<p>It runs OpenStack on the backend, and you can use it to provide
+long-running VMs for research purposes, whether or not those VMs have
+computationally intensive workloads.</p>
+<p>But for the ones that are computationally intensive, Jetstream’s
+nodes are pretty dense on CPUs and GPUs.</p>
+<p>I’m going to be using Jetstream2 for a workshop I’m hosting at PEARC
+this year, and I don’t think I’d be able to conduct that workshop
+without them. So many thanks to them.</p>
+</div>
+<h2 id="department-of-energy">Department of Energy</h2>
+<h3 id="advanced-scientific-computing-research-ascr">Advanced Scientific
+Computing Research (ASCR)</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<p><img src="figures/doe-ascr.png" style="width:80.0%" /></p>
+</div><div class="column" style="width:20%;">
+<p><a href=""><img src="figures/qr-ascr.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>The other main federal agency I think of for scientific research is
+the Department of Energy.</p>
+<p>Oak Ridge National Lab is about 90 minutes away from me, and we’ve
+had close relationships for graduate programs, collaborative research,
+and other work.</p>
+<p>So Oak Ridge’s Leadership Computing Facility is part of DOE’s
+Advanced Scientific Computing Research arm, or ASCR.</p>
+<p>If ACCESS isn’t the best fit for what you’re doing, or especially if
+there’s DOE interest in your research, give ASCR a look.</p>
+</div>
+<h3 id="accessing-ascr-facilities">Accessing ASCR Facilities</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<ul>
+<li><a
+href="https://www.alcf.anl.gov/science/incite-allocation-program">Innovative
+and Novel Computational Impact on Theory and Experiment (INCITE)</a>:
+multi-year awards for open science using majority of machine at Oak
+Ridge or Argonne</li>
+<li><a
+href="https://science.osti.gov/ascr/Facilities/Accessing-ASCR-Facilities/ALCC">ASCR
+Leadership Computing Challenge (ALCC)</a>: 1-year awards for advancing
+DOE mission or broadening the community capable of using large computing
+resources at Oak Ridge, Argonne, or NERSC</li>
+<li><a href="http://www.nersc.gov/users/accounts/">Energy Research
+Computing Allocations Process (ERCAP)</a>: 1-year awards for advancing
+DOE Office of Science and SBIR/STTR mission at NERSC</li>
+<li>Center Reserves: 1-year awards for advancing science and engineering
+fields at <a
+href="https://www.olcf.ornl.gov/support/getting-started/olcf-director-discretion-project-application/">Oak
+Ridge</a>, <a
+href="http://www.alcf.anl.gov/directors-discretionary-dd-program">Argonne</a>,
+or <a
+href="https://www.nersc.gov/users/accounts/allocations/first-allocation/">NERSC</a></li>
+</ul>
+</div><div class="column" style="width:20%;">
+<p><a
+href="https://science.osti.gov/ascr/Facilities/Accessing-ASCR-Facilities"><img
+src="figures/qr-ascr-accessing.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>There’s four main avenues into ASCR resources, each with their own
+niche and access to different facilities.</p>
+<p>INCITE is based out of the Oak Ridge and Argonne labs, and is suited
+for open science applications that can scale to the majority of a top-10
+HPC.</p>
+<p>ALCC can help you on a year-by-year basis if your research aligns
+with DOE missions, or if it broadens the community that can make good
+use of HPC facilities at Oak Ridge, Argonne, or NERSC at Lawrence
+Berkeley.</p>
+<p>ERCAP is for projects with SBIR/STTR relationships that also align
+with DOE Office of Science priorities.</p>
+<p>And there’s a small amount of resources left to each facility’s
+director’s discretion that fall into the “Center Reserves” category.</p>
+<p>All of these programs are linked on this slide for easier access.</p>
+</div>
+<h1 id="servicesconsultancies">Services/Consultancies</h1>
+<h2 id="match-plus">MATCH Plus</h2>
+<h3
+id="multi-tier-assistance-training-computational-help-match-plus">Multi-tier
+Assistance, Training &amp; Computational Help (MATCH) Plus</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<p>MATCH Plus:</p>
+<ul>
+<li>takes requests from researchers with a support need,</li>
+<li>identifies a student and mentor that can provide that support,</li>
+<li>connects the researcher to the student and mentor with regular
+meetings and updates,</li>
+<li>for 5–10 student hours and 2–3 mentor hours per week for 3–6
+months,</li>
+<li>at <strong>no charge</strong>.</li>
+</ul>
+</div><div class="column" style="width:20%;">
+<p><a href="https://support.access-ci.org/match/overview"><img
+src="figures/qr-match.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>In the services and consulting area, ACCESS supports a few different
+options.</p>
+<p>The MATCH Plus program can be a lifesaver for under-resourced
+research projects, or for new users.</p>
+<p>They take requests from any researcher with a need for computational
+help, and matches them up with both a student and a mentor for the
+student to provide that support.</p>
+<p>These engagements typically run for 3–6 months for a 5–10 hours per
+week for the student and 2–3 hours per week for the mentor.</p>
+<p>From that, your project can possibly be scaled up from desktop scale
+to an introductory HPC scale, bottlenecks and optimizations can be
+identified, or you can get extra assistance migrating a workload to an
+ACCESS resource.</p>
+<p>MATCH Plus engagements have absolutely zero charge to the researcher,
+so please make use of them.</p>
+</div>
+<h2 id="match-premier">MATCH Premier</h2>
+<h3
+id="multi-tier-assistance-training-computational-help-match-premier">Multi-tier
+Assistance, Training &amp; Computational Help (MATCH) Premier</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<p>MATCH Premier:</p>
+<ul>
+<li>takes requests from already-funded projects,</li>
+<li>identifies an expert consultant and arranges payment,</li>
+<li>for a 6–12 month period.</li>
+</ul>
+</div><div class="column" style="width:20%;">
+<p><a href="https://support.access-ci.org/match/overview"><img
+src="figures/qr-match.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>For established projects with available budget, a higher tier called
+MATCH Premier is available.</p>
+<p>This is better suited for projects that might benefit from a
+post-doctoral student or research scientist, but your insitution might
+not have those available, or at least not available in time.</p>
+<p>These are paid engagements between the researcher and the expert
+consultant, and ACCESS facilitates making those connections.</p>
+</div>
+<h2 id="engagement-and-performance-operations-center-epoc">Engagement
+and Performance Operations Center (EPOC)</h2>
+<h3 id="engagement-and-performance-operations-center-epoc-1">Engagement
+and Performance Operations Center (EPOC)</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<blockquote>
+<p>EPOC provides researchers with a holistic set of tools and services
+needed to debug performance issues and enable reliable and robust data
+transfers. By considering the full end-to-end data movement pipeline,
+EPOC is uniquely able to support collaborative science, allowing
+researchers to make the most effective use of shared data, computing,
+and storage resources to accelerate the discovery process.</p>
+</blockquote>
+<p>– https://epoc.global/</p>
+</div><div class="column" style="width:20%;">
+<p><a href="https://epoc.global/"><img
+src="figures/qr-epoc.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>The Engagement and Performance Operations Center (EPOC) consults on
+reducing bottlenecks in network performance, data transfer, and similar
+areas.</p>
+<p>They offer a “roadside assistance” service for reactive
+troubleshooting of network problems.</p>
+<p>They also offer an “application deep dive” service that looks more
+closely at application workflows, Science DMZs, and related areas to
+evaluate bottlenecks and potential capacity issues in a more proactive
+way.</p>
+<p>They also provide network monitoring tools like NetSage to more
+practively discover and resolve performance issues.</p>
+</div>
+<h2 id="science-gateways">Science Gateways</h2>
+<h3 id="science-gateways-1">Science Gateways</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<blockquote>
+<p>[Science g]ateways are online interfaces that give researchers,
+educators, and students easy access to shared resources that are
+otherwise inaccessible or unaffordable for a large segment of the
+scientific community.</p>
+<p>…</p>
+<p>The SGCI was founded to provide services and resources that advance
+the state of the art in science gateways, that help gateway creators use
+accepted practices in developing and operating gateways, and that
+catalyze the formation of a community that may be diverse in discipline
+but has a common need to advance science through gateways.</p>
+</blockquote>
+</div><div class="column" style="width:20%;">
+<p><img src="figures/sgx3.png" /></p>
+<p><img src="figures/sgci.png" /></p>
+<p><a href="https://sciencegateways.org"><img
+src="figures/qr-sg.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>The Science Gateways Community Institute and the SGX3 center of
+excellence provide an invaluable resource to your software-facing
+folks.</p>
+<p>Science gateways are usually web-based interfaces to computational
+resources, and can greatly reduce the barriers to entry for those
+resources.</p>
+<p>They’ve got interests in workforce development, broadening the
+community using advanced cyberinfrastructure, providing expert advice,
+and steering future software and gateway development practices.</p>
+</div>
+<h1 id="tools-and-software">Tools and Software</h1>
+<h2 id="openhpc">OpenHPC</h2>
+<h3 id="openhpc-1">OpenHPC</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<blockquote>
+<p>OpenHPC is a Linux Foundation Collaborative Project whose mission is
+to provide a reference collection of open-source HPC software components
+and best practices, lowering barriers to deployment, advancement, and
+use of modern HPC methods and tools.</p>
+<p>OpenHPC components and best practices will enable and accelerate
+innovation and discoveries by broadening access to state-of-the-art,
+open-source HPC methods and tools in a consistent environment, supported
+by a collaborative, worldwide community of HPC users, developers,
+researchers, administrators, and vendors.</p>
+</blockquote>
+<p>– https://openhpc.community/about-us/</p>
+</div><div class="column" style="width:20%;">
+<p><img src="figures/ohpc_logo.png" /></p>
+<p><a href="https://openhpc.community/"><img
+src="figures/qr-openhpc.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>The OpenHPC project has been an abolute life saver for me.</p>
+<p>They provide a completely free and open source suite of components to
+build HPC architectures with a minimum of effort.</p>
+<p>I’ve had every one of my student workers build a virtual OpenHPC
+environment on their laptop, and they’ve all managed to get one running
+within a working day (with a little bit of advice sometimes).</p>
+<p>If your HPC environment was a turnkey vendor product and it’s running
+out its support lifecycle, OpenHPC can give that cluster an extended
+lifespan.</p>
+<p>It can also let you focus your budget on hardware and people rather
+than licensing fees, for those where that makes sense.</p>
+</div>
+<h2 id="open-xdmod">Open XDMoD</h2>
+<h3 id="open-xdmod-1">Open XDMoD</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<p><img src="figures/open-xdmod.png" /></p>
+</div><div class="column" style="width:20%;">
+<p><a href=""><img src="figures/qr-open-xdmod.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>Open XDMoD from the University of Buffalo is an invaluable tool to
+quantify your HPC’s usage trends, and then communicate that to
+reesarchers, leadership, or other stakeholders.</p>
+<p>Open XDMoD has helped me stop so many conversations that started with
+“I’m not getting enough access to the cluster” and wound up in a much
+more productive direction as a result.</p>
+<p>Also totally free and open source, with a long history of development
+and support.</p>
+<p>This is one of the tools that makes an under-resourced institution
+look more professional.</p>
+</div>
+<h2 id="open-ondemand">Open OnDemand</h2>
+<h3 id="open-ondemand-1">Open OnDemand</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<p><img src="figures/ood-lrc.png" /></p>
+</div><div class="column" style="width:20%;">
+<p><a href=""><img src="figures/qr-open-ondemand.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>Open OnDemand from the Ohio Supercomputer Center is an outstanding
+tool to make things easier on new users, and experienced users often
+like it as well.</p>
+<p>It provides a web interface to your HPC users’ files, web-based
+terminals to your login systems, monitoring of jobs, facilitates
+graphical desktop access to your cluster nodes, and lets you build or
+use application forms to streamline common computational tasks.</p>
+<p>Your security people will be happy that it can be integrated with
+whatever multi-factor authentication you’re using elsewhere, and you’ll
+probably hear good things from your users about it.</p>
+</div>
+<h2 id="spack">Spack</h2>
+<h3 id="spack-1">Spack</h3>
+<div class="columns" data-align="top">
+<div class="column" style="width:80%;">
+<ul>
+<li>Spack is a package management tool designed to support multiple
+versions and configurations of software on a wide variety of platforms
+and environments.</li>
+<li>It was designed for large supercomputing centers, where many users
+and application teams share common installations of software on clusters
+with exotic architectures, using libraries that do not have a standard
+ABI.</li>
+<li>Spack is non-destructive: installing a new version does not break
+existing installations, so many configurations can coexist on the same
+system.</li>
+</ul>
+<p>– https://spack.readthedocs.io/</p>
+</div><div class="column" style="width:20%;">
+<p><a href=""><img src="figures/qr-spack.png" /></a></p>
+</div>
+</div>
+<div class="notes">
+<p>My last tool is Spack, which provides a framework and tooling to
+build software packages.</p>
+<p>It integrates with the modules system you might already have, and
+makes it much easier to support optimized builds of computational tools
+compared to what you might get with a simple configure/make/make install
+set of commands.</p>
+<p>They usually offer full-day workshops at PEARC, and all their
+training material is online. But attending the workshop in person was
+invaluable for me and one of my students in getting past a few
+hurdles.</p>
+</div>
+</body>
+</html>

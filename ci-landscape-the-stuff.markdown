@@ -79,6 +79,75 @@ https://allocations.access-ci.org/
 :::
 :::
 
+### ACCESS Project Types
+
+::: {.columns align=top}
+::: {.column width=80%}
+
+Explore
+
+: for resource evaluation, grad student projects, small classes/training events, benchmarking, development/porting, other small-scale cases
+
+Discover
+
+: for grants with modest needs, Campus Champions, large classes/training events, NSF graduate fellowships, gateway development
+
+Accelerate
+
+: for experienced users with mid-scale needs, multi-grant programs, collaborative projects, growing gateways
+
+Maximize
+
+: largest-scale research activities
+
+:::
+::: {.column width=20%}
+[![](figures/qr-access-allocations-project-types.png)](https://allocations.access-ci.org/project-types)
+:::
+:::
+
+::: notes
+x
+:::
+
+### ACCESS Project Types
+
+::: {.columns align=top}
+::: {.column width=80%}
+
+Explore, Discover, Accelerate:
+
+- run for grant duration or 12 months
+- can be requested any time
+- allow multiple projects
+
+Explore
+
+: 400k credits, only an overview required
+
+Discover
+
+: 1.5M credits, 1-page proposal required
+
+Accelerate
+
+: 3M credits, 3-page max proposal required, subject to merit review
+
+Maximize
+
+: usually only 1 project allowed, 10-page max proposal required, subject to merit review, requests accepted every 6 months
+
+:::
+::: {.column width=20%}
+[![](figures/qr-access-allocations-project-types.png)](https://allocations.access-ci.org/project-types)
+:::
+:::
+
+::: notes
+x
+:::
+
+
 ### ACCESS Resource Catalog
 
 ::: {.columns align=top}
@@ -385,7 +454,14 @@ x
 
 ### Open XDMoD
 
-x
+::: {.columns align=top}
+::: {.column width=80%}
+![](figures/open-xdmod.png)
+:::
+::: {.column width=20%}
+[![](figures/qr-open-xdmod.png)]()
+:::
+:::
 
 ::: notes
 x
@@ -395,17 +471,14 @@ x
 
 ### Open OnDemand
 
-x
-
-::: notes
-x
+::: {.columns align=top}
+::: {.column width=80%}
+![](figures/ood-lrc.png)
 :::
-
-## ColdFront
-
-### ColdFront
-
-x
+::: {.column width=20%}
+[![](figures/qr-open-ondemand.png)]()
+:::
+:::
 
 ::: notes
 x
@@ -415,7 +488,20 @@ x
 
 ### Spack
 
-x
+::: {.columns align=top}
+::: {.column width=80%}
+
+- Spack is a package management tool designed to support multiple versions and configurations of software on a wide variety of platforms and environments.
+- It was designed for large supercomputing centers, where many users and application teams share common installations of software on clusters with exotic architectures, using libraries that do not have a standard ABI.
+- Spack is non-destructive: installing a new version does not break existing installations, so many configurations can coexist on the same system.
+
+-- https://spack.readthedocs.io/
+
+:::
+::: {.column width=20%}
+[![](figures/qr-spack.png)]()
+:::
+:::
 
 ::: notes
 x

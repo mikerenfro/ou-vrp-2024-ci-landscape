@@ -57,7 +57,13 @@ x
 :::
 
 ::: notes
-x
+So, in terms of systems, providers, and technologies, there's a huge array of those out there.
+
+Rather than give you every detail about every one of them and running out of time, let me start with the resources you can use to *find* more of those resources, especially computational and storage resources outside your institution.
+
+Depending on your or your users' background, you might get overwhelmed by the variety of options, or your users might make a suboptimal choice based off what they're used to using, even when better resources exist.
+
+So let's take a look at some of the federally-funded resources and how you can narrow things down a bit.
 :::
 
 # Computational and/or Storage Resources
@@ -78,6 +84,13 @@ https://allocations.access-ci.org/
 [![](figures/qr-access-allocations-home.png)](https://allocations.access-ci.org/)
 :::
 :::
+
+::: notes
+The critical mass of NSF-funded resources can be found via the Advanced Cyberinfrastructure Coordination Ecosystem: Services & Support program, or ACCESS.
+
+And ACCESS' allocations portal is the starting point for getting set up on ACCESS, whether for yourself or for your researchers.
+:::
+
 
 ### ACCESS Project Types
 
@@ -107,7 +120,11 @@ Maximize
 :::
 
 ::: notes
-x
+The first thing ACCESS needs from you is a project categorization.
+
+A whole lot of your use cases can be met with the lower two project types. They'll accommodate classes or training workshops, your NSF graduate fellowship recipients, and if you're a smaller institution, even these smaller project types can overwhelm your local resources.
+
+But ACCESS can also accommodate the highest scale of research activities, all the way out to the ones that make international news for black holes and subatomic particle discoveries.
 :::
 
 ### ACCESS Project Types
@@ -144,7 +161,13 @@ Maximize
 :::
 
 ::: notes
-x
+The ACCESS procedures are a vast improvement over XSEDE's in terms of barriers to entry, flexibility, and responsiveness.
+
+No shade on XSEDE for what it enabled, but ACCESS learned a lot of lessons from XSEDE.
+
+In particular, all but the highest tier of ACCESS request can be submitted at any time during the year, and have pretty small justification requirements.
+
+Your project is awarded credits that can be applied to any ACCESS resource, and any unused resources can be exchanged back into credits. So you can do more exploration and maybe make a few more small mistakes without jeopardizing research progress.
 :::
 
 
@@ -159,6 +182,16 @@ x
 ::: {.column width=20%}
 [![](figures/qr-access-resource-catalog.png)](https://allocations.access-ci.org/resources/)
 :::
+:::
+
+::: notes
+As you're working on the documentation for the ACCESS project you'll submit, you can also check out ACCESS' resource catalog.
+
+It has somewhere on the order of 40 different services listed, and there's no way you'll want to go through all of them one at a time.
+
+So they provide some plain-language filters on the left where you and your researchers can narrow down the type of resource you're interested in, and then you can get more information on each of them by clicking their entry in the list on the right.
+
+I'm going to give you a brief survey of some of the newest and maybe the most interesting resources on the list, but by all means, explore through all the filtering options to find what works best, and reach out to ACCESS or others in the RCD communities for advice if needed.
 :::
 
 ### Stampede3 at Texas Advanced Computing Center (TACC)
@@ -184,7 +217,11 @@ x
 :::
 
 ::: notes
-x
+Texas Advanced Computing Center at UT Austin has Stampede3, an absolutely enormous HPC installation with over 1800 nodes and a mix of Intel GPUs, high bandwidth memory, and high speed networking.
+
+Though it's more than capable of handling application runs at the tens of thousands of cores scale, they'll also take smaller sized jobs and high throughput computing applications.
+
+This just launched in late 2023, and is a successor to TACC's successful Stampede and Stampede2 installations.
 :::
 
 ### Delta at National Center for Supercomputing Applications (NCSA)
@@ -208,7 +245,11 @@ x
 :::
 
 ::: notes
-x
+Another new system is at the University of Illinois' National Center for Supercomputing Applications.
+
+NCSA is basically the motherland of academic supercomputing for me, and their new Delta system is very GPU-heavy for any and all accelerated simulation, AI, deep learning, and similar applications.
+
+They may not be the absolute newest, most bleeding-edge hardware, but 800+ Ampere GPUs is nothing to sneeze at.
 :::
 
 ### Bridges-2 at Pittsburgh Supercomputing Center (PSC)
@@ -232,7 +273,11 @@ x
 :::
 
 ::: notes
-x
+Bridges-2 at the Pittsburgh Supercomputing Center managed by Carnegie Mellon and the University of Pittsburgh is a long-standing resource spanning the XSEDE and the ACCESS programs.
+
+Again, not the most bleeding edge hardware, but for certain applications, their extreme memory nodes with 4 TB of RAM each are invaluable.
+
+Bridges-2 has long been my go-to resource when my users outgrow what I can do, or when a backhoe takes out my data center's power, leading to a weeks-long storage outage last year.
 :::
 
 ### ACES at Texas A&M University
@@ -260,7 +305,13 @@ x
 :::
 
 ::: notes
-x
+Now ACES at Texas A&M is quite a bit different than Stampede3, Bridges-2, or Delta.
+
+Its niche is in software-defined architectures and composability of resources more than raw compute power.
+
+They've got a mix of Intel and AMD CPUs, but the main draw there is the wide range of accelerators: not just GPUs. but FPGAs, coprocessors, vector engines, and intelligence processing units.
+
+Most of those accelerators can be shared across multiple nodes, leading to an incredibly flexible facility for some of the more uncommon use cases.
 :::
 
 ### Jetstream2 at Indiana University
@@ -283,7 +334,15 @@ x
 :::
 
 ::: notes
-x
+The last ACCESS facility I want to talk about is Jetstream2 at Indiana University.
+
+While the rest of the facilities so far have been for traditional HPC, Jetstream2 is a private cloud environment suited for on-demand cyberinfrastructure needs.
+
+It runs OpenStack on the backend, and you can use it to provide long-running VMs for research purposes, whether or not those VMs have computationally intensive workloads.
+
+But for the ones that are computationally intensive, Jetstream's nodes are pretty dense on CPUs and GPUs.
+
+I'm going to be using Jetstream2 for a workshop I'm hosting at PEARC this year, and I don't think I'd be able to conduct that workshop without them. So many thanks to them.
 :::
 
 ## Department of Energy
@@ -302,7 +361,13 @@ x
 :::
 
 ::: notes
-x
+The other main federal agency I think of for scientific research is the Department of Energy.
+
+Oak Ridge National Lab is about 90 minutes away from me, and we've had close relationships for graduate programs, collaborative research, and other work.
+
+So Oak Ridge's Leadership Computing Facility is part of DOE's Advanced Scientific Computing Research arm, or ASCR.
+
+If ACCESS isn't the best fit for what you're doing, or especially if there's DOE interest in your research, give ASCR a look.
 :::
 
 ### Accessing ASCR Facilities
@@ -322,7 +387,17 @@ x
 :::
 
 ::: notes
-x
+There's four main avenues into ASCR resources, each with their own niche and access to different facilities.
+
+INCITE is based out of the Oak Ridge and Argonne labs, and is suited for open science applications that can scale to the majority of a top-10 HPC.
+
+ALCC can help you on a year-by-year basis if your research aligns with DOE missions, or if it broadens the community that can make good use of HPC facilities at Oak Ridge, Argonne, or NERSC at Lawrence Berkeley.
+
+ERCAP is for projects with SBIR/STTR relationships that also align with DOE Office of Science priorities.
+
+And there's a small amount of resources left to each facility's director's discretion that fall into the "Center Reserves" category.
+
+All of these programs are linked on this slide for easier access.
 :::
 
 # Services/Consultancies
@@ -349,7 +424,17 @@ MATCH Plus:
 :::
 
 ::: notes
-x
+In the services and consulting area, ACCESS supports a few different options.
+
+The MATCH Plus program can be a lifesaver for under-resourced research projects, or for new users.
+
+They take requests from any researcher with a need for computational help, and matches them up with both a student and a mentor for the student to provide that support.
+
+These engagements typically run for 3--6 months for a 5--10 hours per week for the student and 2--3 hours per week for the mentor.
+
+From that, your project can possibly be scaled up from desktop scale to an introductory HPC scale, bottlenecks and optimizations can be identified, or you can get extra assistance migrating a workload to an ACCESS resource.
+
+MATCH Plus engagements have absolutely zero charge to the researcher, so please make use of them.
 :::
 
 ## MATCH Premier
@@ -372,7 +457,11 @@ MATCH Premier:
 :::
 
 ::: notes
-x
+For established projects with available budget, a higher tier called MATCH Premier is available.
+
+This is better suited for projects that might benefit from a post-doctoral student or research scientist, but your insitution might not have those available, or at least not available in time.
+
+These are paid engagements between the researcher and the expert consultant, and ACCESS facilitates making those connections.
 :::
 
 ## Engagement and Performance Operations Center (EPOC)
@@ -392,7 +481,13 @@ x
 :::
 
 ::: notes
-x
+The Engagement and Performance Operations Center (EPOC) consults on reducing bottlenecks in network performance, data transfer, and similar areas.
+
+They offer a "roadside assistance" service for reactive troubleshooting of network problems.
+
+They also offer an "application deep dive" service that looks more closely at application workflows, Science DMZs, and related areas to evaluate bottlenecks and potential capacity issues in a more proactive way.
+
+They also provide network monitoring tools like NetSage to more practively discover and resolve performance issues.
 :::
 
 ## Science Gateways
@@ -420,7 +515,11 @@ x
 :::
 
 ::: notes
-x
+The Science Gateways Community Institute and the SGX3 center of excellence provide an invaluable resource to your software-facing folks.
+
+Science gateways are usually web-based interfaces to computational resources, and can greatly reduce the barriers to entry for those resources.
+
+They've got interests in workforce development, broadening the community using advanced cyberinfrastructure, providing expert advice, and steering future software and gateway development practices.
 :::
 
 # Tools and Software
@@ -447,7 +546,15 @@ x
 :::
 
 ::: notes
-x
+The OpenHPC project has been an abolute life saver for me.
+
+They provide a completely free and open source suite of components to build HPC architectures with a minimum of effort.
+
+I've had every one of my student workers build a virtual OpenHPC environment on their laptop, and they've all managed to get one running within a working day (with a little bit of advice sometimes).
+
+If your HPC environment was a turnkey vendor product and it's running out its support lifecycle, OpenHPC can give that cluster an extended lifespan.
+
+It can also let you focus your budget on hardware and people rather than licensing fees, for those where that makes sense.
 :::
 
 ## Open XDMoD
@@ -464,7 +571,13 @@ x
 :::
 
 ::: notes
-x
+Open XDMoD from the University of Buffalo is an invaluable tool to quantify your HPC's usage trends, and then communicate that to reesarchers, leadership, or other stakeholders.
+
+Open XDMoD has helped me stop so many conversations that started with "I'm not getting enough access to the cluster" and wound up in a much more productive direction as a result.
+
+Also totally free and open source, with a long history of development and support.
+
+This is one of the tools that makes an under-resourced institution look more professional.
 :::
 
 ## Open OnDemand
@@ -481,7 +594,11 @@ x
 :::
 
 ::: notes
-x
+Open OnDemand from the Ohio Supercomputer Center is an outstanding tool to make things easier on new users, and experienced users often like it as well.
+
+It provides a web interface to your HPC users' files, web-based terminals to your login systems, monitoring of jobs, facilitates graphical desktop access to your cluster nodes, and lets you build or use application forms to streamline common computational tasks.
+
+Your security people will be happy that it can be integrated with whatever multi-factor authentication you're using elsewhere, and you'll probably hear good things from your users about it.
 :::
 
 ## Spack
@@ -504,5 +621,9 @@ x
 :::
 
 ::: notes
-x
+My last tool is Spack, which provides a framework and tooling to build software packages.
+
+It integrates with the modules system you might already have, and makes it much easier to support optimized builds of computational tools compared to what you might get with a simple configure/make/make install set of commands.
+
+They usually offer full-day workshops at PEARC, and all their training material is online. But attending the workshop in person was invaluable for me and one of my students in getting past a few hurdles.
 :::

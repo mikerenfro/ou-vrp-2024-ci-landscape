@@ -72,34 +72,26 @@ So for the folks who don't have a lot of time for the rest of this talk, or for 
 
 # The Starter Pack
 
-## Campus Champions
+## Campus Research Computing Consortium (CaRCC)
 
-### Campus Champions
+### Campus Research Computing Consortium (CaRCC)
 
 ::: {.columns align=top}
 ::: {.column width=80%}
-- One of the original RCD communities (2008)
-- Formerly funded by NSF XSEDE program
-- Over 800 members from over 300 institutions in all 50 states
-- Active mailing list for all topics and all RCD roles
-- Monthly Zoom call with planned speaker/topic
-- Monthly Zoom call for any other topics
-- Additional visibility to their institutions' NSF ACCESS usage
-
+![](figures/CaRCC-overview.png){ width=70% }
 :::
 ::: {.column width=20%}
-![](figures/campus-champions.jpg){ width=80% }
-
-[![](figures/qr-campus-champions.png)](https://campuschampions.cyberinfrastructure.org)
+[![](figures/qr-carcc.png)](https://carcc.org/)
 :::
 :::
 
 ::: notes
-The first one is Campus Champions: this was the second RCD community that I joined about 5 years ago, the one that introduced me to Henry and other folks via the Virtual Residency.
+Another catch-all group similar to Campus Champions is the Campus Research Computing Consortium, or CaRCC.
 
-Campus Champions is one of the longest-running RCD communities, starting around 2008 and formerly funded by NSF's Extreme Science and Engineering Discovery Environment (XSEDE). It currently has over 800 members from every state, and it includes folks from every RCD role: facilitators, software engineers, systems administrators, etc.
+CaRCC has a pretty comprehensive structure of tracks, interest groups, and working groups. These are all ad hoc and community driven, and the tracks tend to have one Zoom call per month with a lot of behind the scenes coordination going on.
 
-We've got an active mailing list and fairly active Slack, with two regularly-scheduled calls each month. One call has a specific topic and an invited speaker, while the other one is a more free-flowing community chat over any topic of interest to the attendees. Sometimes we start with something hot from the mailing list, other times from recent news items.
+The biggest thing I'll applaud CaRCC for is their ongoing and invaluable work in professionalization of the RCD field, which helps translate RCD roles into job family matrices that I've used at Tennessee Tech, the RCD Nexus organization that puts together workshops and papers on workforce development and benchmarking your organization against others, and the RCD Capabilities Model to assist with that benchmarking and also with identifying the priorities for improving your organization.
 
-One other advantage to Campus Champions is that even though we don't have direct ties to XSEDE's followup project, ACCESS, the ACCESS team does provide Campus Champions extra insight into their institutions' usage of ACCESS resources, which can help you guide your researchers toward more efficient usage or more suitable locations for their work.
+Now those organizations are all virtual, no cost to join, and extremely welcoming and accessible to new folks.
 :::
+

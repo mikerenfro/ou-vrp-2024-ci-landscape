@@ -103,27 +103,3 @@ We've got an active mailing list and fairly active Slack, with two regularly-sch
 
 One other advantage to Campus Champions is that even though we don't have direct ties to XSEDE's followup project, ACCESS, the ACCESS team does provide Campus Champions extra insight into their institutions' usage of ACCESS resources, which can help you guide your researchers toward more efficient usage or more suitable locations for their work.
 :::
-
-## Campus Research Computing Consortium (CaRCC)
-
-### Campus Research Computing Consortium (CaRCC)
-
-::: {.columns align=top}
-::: {.column width=80%}
-![](figures/CaRCC-overview.png){ width=70% }
-:::
-::: {.column width=20%}
-[![](figures/qr-carcc.png)](https://carcc.org/)
-:::
-:::
-
-::: notes
-Another catch-all group similar to Campus Champions is the Campus Research Computing Consortium, or CaRCC.
-
-CaRCC has a pretty comprehensive structure of tracks, interest groups, and working groups. These are all ad hoc and community driven, and the tracks tend to have one Zoom call per month with a lot of behind the scenes coordination going on.
-
-The biggest thing I'll applaud CaRCC for is their ongoing and invaluable work in professionalization of the RCD field, which helps translate RCD roles into job family matrices that I've used at Tennessee Tech, the RCD Nexus organization that puts together workshops and papers on workforce development and benchmarking your organization against others, and the RCD Capabilities Model to assist with that benchmarking and also with identifying the priorities for improving your organization.
-
-Now those organizations are all virtual, no cost to join, and extremely welcoming and accessible to new folks.
-:::
-

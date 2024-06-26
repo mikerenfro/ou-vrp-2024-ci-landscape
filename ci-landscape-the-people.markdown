@@ -27,9 +27,7 @@ toc: false
 :::
 
 ::: {.column width=50%}
-![Some skinny nerd, 1990]
-
-[Some skinny nerd, 1990]: figures/mike-1990.jpg { width=100% }
+x
 :::
 :::
 

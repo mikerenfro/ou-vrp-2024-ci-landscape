@@ -54,9 +54,7 @@ I lucked into a couple of co-op years at Oak Ridge National Lab doing a mix of C
 :::
 
 ::: {.column width=30%}
-![Same nerd, not remotely skinny, 2023]
-
-[Same nerd, not remotely skinny, 2023]: figures/mike-2023.jpg { width=100% }
+x
 :::
 :::
 

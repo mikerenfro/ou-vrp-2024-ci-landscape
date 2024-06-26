@@ -104,10 +104,10 @@ One other advantage to Campus Champions is that even though we don't have direct
 
 ::: {.columns align=top}
 ::: {.column width=80%}
-![](figures/CaRCC-overview.png){ width=70% }
+x
 :::
 ::: {.column width=20%}
-[![](figures/qr-carcc.png)](https://carcc.org/)
+x
 :::
 :::
 

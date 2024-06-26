@@ -89,8 +89,6 @@ So for the folks who don't have a lot of time for the rest of this talk, or for 
 :::
 ::: {.column width=20%}
 ![](figures/campus-champions.jpg){ width=80% }
-
-[![](figures/qr-campus-champions.png)](https://campuschampions.cyberinfrastructure.org)
 :::
 :::
 
@@ -110,10 +108,10 @@ One other advantage to Campus Champions is that even though we don't have direct
 
 ::: {.columns align=top}
 ::: {.column width=80%}
-x
+![](figures/CaRCC-overview.png){ width=70% }
 :::
 ::: {.column width=20%}
-x
+[![](figures/qr-carcc.png)](https://carcc.org/)
 :::
 :::
 

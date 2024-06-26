@@ -88,7 +88,7 @@ So for the folks who don't have a lot of time for the rest of this talk, or for 
 
 :::
 ::: {.column width=20%}
-![](figures/campus-champions.jpg){ width=80% }
+x
 :::
 :::
 
